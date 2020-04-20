@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    #countdownMain {
+      text-align: center;
+      font-size: 60px;
+      margin-top: 0px;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <!-- Header Block -->
+    <div id="head">
+        <h2 id="product_logo">
+            Welcome to AllThe420s
+        </h2><br>
+        <h3 id="product_byline">
+          Smoke for 4:20 in every standard time zone. A countdown will display on each page, and the game is automated. 
+          <br>Check back any time during the day by visiting https://htch.cc/420
+        </h3>
+        <p></p>
+    </div>
+    <br>
+    <!-- Page Content Block -->
+    <div id="page_content">
+        <p id="countdownMain"></p>
+        
+
+    </div>
+    <p id="page_content" style="font-size: 10px;"><a href="https://htch.cc/420game" target="_new">AllThe420s by Nathan Dick</a></p>
+</div>
+
+<p id="countdownMain"></p>
+
+<script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("Apr 20, 2020 10:15:00").getTime();
+
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+
+    // Get today's date and time
+    var now = new Date().getTime();
+      
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+      
+    // Time calculations for days, hours, minutes and seconds
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+    // Output the result in an element with id="demo"
+    document.getElementById("countdownMain").innerHTML = minutes + "m " + seconds + "s ";
+      
+    // If the count down is over, write some text 
+    var curMachineTime = new Date();
+    var curMachineHour = curMachineTime.getHours();
+
+    if (distance < 0) { 
+      if (curMachineHour >= 10 && curMachineHour <=21 ) window.location.replace(curMachineHour);	
+      else window.location.replace('/finished.html')
+    
+    }
+
+
+
+  }, 1000);
+</script>
+
+</body>
+</html>

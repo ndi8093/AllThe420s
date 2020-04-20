@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #countdownMain {
+        text-align: center;
+        font-size: 60px;
+        margin-top: 0px;
+        padding: none;
+        }
+    </style>
+    <link rel="stylesheet" href="../splash-home.css" />
+</head>
+<body>
+    <div id="wrap">
+        <!-- Header Block -->
+        <div id="head">
+            <h2 id="product_logo">
+                It's 4:20 in:
+                <br>
+                Nuuk, Greenland and Sydney, Australia
+            </h2><br>
+            <h3 id="product_byline">Happy 4/20. It's time to smoke in: </h3>
+            <p></p>
+        </div>
+        <br>
+        <!-- Page Content Block -->
+        <div id="page_content">
+            <p id="countdownMain"></p>
+            
+
+        </div>
+        <p id="page_content" style="font-size: 10px;"><a href="https://htch.cc/420game" target="_new">AllThe420s by Nathan Dick</a></p>
+    </div>
+
+
+
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Apr 20, 2020 14:20").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+            
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+            
+        // Time calculations for days, hours, minutes and seconds
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+        // Output the result in an element with id="demo"
+        document.getElementById("countdownMain").innerHTML =minutes + "m " + seconds + "s ";
+            
+        // If the count down is over, write some text 
+
+        if (distance < 0) { 
+            document.getElementById("countdownMain").innerHTML = "SMOKE!";	
+        }
+
+
+
+        }, 1000);
+        var countDownDate2 = new Date("Apr 20, 2020 14:22").getTime();
+
+        // Update the count down every 1 second
+        var x2 = setInterval(function() {
+
+        // Get today's date and time
+        var now2 = new Date().getTime();
+            
+        // Find the distance between now and the count down date
+        var distance2 = countDownDate2 - now2;
+            
+        // Time calculations for days, hours, minutes and seconds
+        var minutes2 = Math.floor((distance2 % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds2 = Math.floor((distance2 % (1000 * 60)) / 1000);
+
+
+        if (distance2 < 0) { 
+            window.location.replace('../15'); 	
+        }
+
+
+
+    }, 1000);
+</script>
+
+
+</body>
+</html>
